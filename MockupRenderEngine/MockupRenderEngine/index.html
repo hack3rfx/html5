@@ -1,0 +1,18 @@
+﻿<html>
+<head>
+    <title>test</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/GameEngine.js"></script>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="top-left">
+        FPS: <span id="fps_counter">0</span>
+    </div>
+    <script>
+        var engine = new GameEngine("canvas");
+        engine.HookFPSCounter("fps_counter");
+        engine.Start();
+    </script>
+</body>
+</html>
