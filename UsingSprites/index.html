@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="c"></canvas>
+    <script src="js/KeyManager.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/Landscape.js"></script>
+    <script src="js/Engine.js"></script>
+    <script src="js/Debugger.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.location.search.indexOf("debug") > -1)
+                Engine._debug = true;
+
+            Engine.Initialize("c");
+            Engine.Start();
+        });
+    </script>
+</body>
+</html>
